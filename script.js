@@ -45,7 +45,42 @@ const cursos = [
   { ciclo: "5to Ciclo", id: "quimicaAnalitica", nombre: "Química Analítica", requisitos: ["quimicaInorg1", "inglesTec"], abre: ["analisis1"] },
   { ciclo: "5to Ciclo", id: "labAnalitica", nombre: "Laboratorio de Química Analítica", requisitos: ["labInorg1"], abre: ["labAnalisis1"] },
 
-  // Resto de ciclos continúa igual...
+  // 6to Ciclo
+  { ciclo: "6to Ciclo", id: "quimicaInorg3", nombre: "Química inorgánica III", requisitos: ["quimicaInorg2"], abre: ["quimicaInorg4"] },
+  { ciclo: "6to Ciclo", id: "labInorg3", nombre: "Laboratorio de química inorgánica III", requisitos: ["labInorg2"], abre: ["labInorg4"] },
+  { ciclo: "6to Ciclo", id: "quimicaOrg3", nombre: "Química orgánica III", requisitos: ["quimicaOrg2"], abre: ["bioquimica", "alimentos"] },
+  { ciclo: "6to Ciclo", id: "labOrg3", nombre: "Laboratorio de Química orgánica III", requisitos: ["labOrg2"], abre: ["labBioq"] },
+  { ciclo: "6to Ciclo", id: "analisis1", nombre: "Análisis instrumental I", requisitos: ["quimicaAnalitica", "fisico2"], abre: ["analisis2"] },
+  { ciclo: "6to Ciclo", id: "labAnalisis1", nombre: "Laboratorio de Análisis instrumental I", requisitos: ["labAnalitica"], abre: ["labCinetica", "labAnalisis2"] },
+  { ciclo: "6to Ciclo", id: "labCinetica", nombre: "Laboratorio de cinética, catálisis y electroquímica", requisitos: ["labFisico2"], abre: ["labColoidal"] },
+
+  // 7mo Ciclo
+  { ciclo: "7mo Ciclo", id: "quimicaInorg4", nombre: "Química Inorgánica IV", requisitos: ["fisico2", "quimicaInorg3"] },
+  { ciclo: "7mo Ciclo", id: "labInorg4", nombre: "Laboratorio de química inorgánica IV", requisitos: ["labInorg3"] },
+  { ciclo: "7mo Ciclo", id: "bioquimica", nombre: "Bioquímica", requisitos: ["fisico2", "quimicaOrg3"], abre: ["productosNat"] },
+  { ciclo: "7mo Ciclo", id: "labBioq", nombre: "Laboratorio de Bioquímica", requisitos: ["labFisico2", "labOrg3"], abre: ["labProductosNat"] },
+  { ciclo: "7mo Ciclo", id: "cuantica", nombre: "Química cuántica y termodinámica estadística", requisitos: ["fisico2"], abre: ["coloidal"] },
+  { ciclo: "7mo Ciclo", id: "analisis2", nombre: "Análisis instrumental II", requisitos: ["analisis1"], abre: ["metodologia", "analisis3", "tesis1", "alimentos"] },
+  { ciclo: "7mo Ciclo", id: "labAnalisis2", nombre: "Laboratorio Análisis instrumental II", requisitos: ["labAnalisis1"], abre: ["labAnalisis3", "tesis1", "labAlimentos"] },
+
+  // 8vo Ciclo
+  { ciclo: "8vo Ciclo", id: "productosNat", nombre: "Química de los productos naturales", requisitos: ["bioquimica"] },
+  { ciclo: "8vo Ciclo", id: "labProductosNat", nombre: "Laboratorio de química de los productos naturales", requisitos: ["labBioq"] },
+  { ciclo: "8vo Ciclo", id: "metodologia", nombre: "Metodología de la investigación", requisitos: ["analisis2"], abre: ["tesis1", "innovacion"] },
+  { ciclo: "8vo Ciclo", id: "coloidal", nombre: "Química coloidal y fisicoquímica de interfases", requisitos: ["cuantica"] },
+  { ciclo: "8vo Ciclo", id: "labColoidal", nombre: "Laboratorio de Química coloidal e interfases", requisitos: ["labCinetica"] },
+  { ciclo: "8vo Ciclo", id: "analisis3", nombre: "Análisis instrumental III", requisitos: ["analisis2"], abre: ["tesis2", "investigacion"] },
+  { ciclo: "8vo Ciclo", id: "labAnalisis3", nombre: "Laboratorio de Análisis instrumental III", requisitos: ["labAnalisis2"] },
+
+  // 9no Ciclo
+  { ciclo: "9no Ciclo", id: "tesis1", nombre: "Tesis 1", requisitos: ["analisis2", "labAnalisis2", "metodologia"], abre: ["tesis2", "investigacion"] },
+  { ciclo: "9no Ciclo", id: "alimentos", nombre: "Química de los alimentos", requisitos: ["quimicaOrg3", "analisis2"] },
+  { ciclo: "9no Ciclo", id: "labAlimentos", nombre: "Laboratorio de análisis químico", requisitos: ["labAnalisis2"] },
+
+  // 10mo Ciclo
+  { ciclo: "10mo Ciclo", id: "innovacion", nombre: "Innovación y emprendimiento", requisitos: ["metodologia"] },
+  { ciclo: "10mo Ciclo", id: "tesis2", nombre: "Tesis 2", requisitos: ["analisis3", "labAnalisis3", "tesis1"] },
+  { ciclo: "10mo Ciclo", id: "investigacion", nombre: "Trabajo de investigación", requisitos: ["analisis3", "labAnalisis3", "tesis1"] }
 ];
 
 function crearCursos() {
