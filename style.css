@@ -4,6 +4,9 @@ body {
   color: #444;
   padding: 2rem;
   text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 h1 {
@@ -11,8 +14,24 @@ h1 {
   margin-bottom: 2rem;
 }
 
+#banda-ciclos {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
 .bloque-ciclo {
-  margin-bottom: 3rem;
+  background-color: #fff0f5;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-width: 300px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
 }
 
 .bloque-ciclo h2 {
@@ -25,9 +44,9 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .course {
@@ -56,8 +75,5 @@ h1 {
 
 .course:hover:not(.locked):not(.completed) {
   background-color: #f06292;
-  color: white;
-}
-
   color: white;
 }
